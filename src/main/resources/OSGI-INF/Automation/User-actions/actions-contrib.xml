@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.nuxeo.relations-search-configuration.actions" version="1.0.0">
+  <require>org.nuxeo.runtime.started</require>
+  
+  <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
+    <action id="AdminTab" link="/incl/adminTab.xhtml"
+     type="admin_rest_document_link"
+     label="Configuration" order="150">
+     <category>NUXEO_ADMIN</category>
+     <filter-id>only_for_manager</filter-id>
+   </action>
+     <action id="RelationSearch" link="/incl/relationSearch.xhtml" label="Relations Search"
+      order="0" type="rest_document_link">
+      <category>AdminTab_sub_tab</category>
+      <filter-id>only_for_manager</filter-id>
+    </action>
+    <action id="view_comments">
+      <filter id="doctest.deny.view_comments">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="TAB_WORKSPACE_EDIT">
+      <filter id="doctest.deny.tab_workspace_edit">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="TAB_FILES_EDIT">
+      <filter id="doctest.deny.tab_files_edit">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="TAB_CONTENT">
+      <filter id="doctest.deny.tab_content">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="TAB_CONTENT_HISTORY">
+      <filter id="doctest.deny.tab_content_history">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="TAB_MANAGE">
+      <filter id="doctest.deny.tab_manage">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="TAB_PUBLISH">
+      <filter id="doctest.deny.tab_publish">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="TAB_RELATIONS">
+      <filter id="doctest.deny.tab_relations">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="TAB_MY_SUBSCRIPTIONS">
+      <filter id="doctest.deny.tab_my_subscriptions">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="TAB_VIEW">
+      <filter id="doctest.deny.tab_view">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="TAB_ROUTE_WORKFLOW">
+      <filter id="doctest.deny.tab_route_workflow">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="TAB_CONTENT_JBPM">
+      <filter id="doctest.deny.tab_content_jbpm">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+    <action id="showFancyBoxPreview">
+      <filter id="doctest.deny.showfancyboxpreview">
+        <rule grant="false">
+          <type>AthentoSetup</type>
+        </rule>
+      </filter>
+    </action>
+ </extension>
+</component>

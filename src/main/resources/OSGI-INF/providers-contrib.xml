@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.relations-search-configuration.providers" version="1.0.0">
+	<require>org.nuxeo.runtime.started</require>
+
+    <extension target="org.nuxeo.ecm.platform.query.api.PageProviderService" point="providers">
+ 
+    <coreQueryPageProvider name="light_document_suggestion">
+      <property name="maxResults">PAGE_SIZE</property>
+      
+      <pattern escapeParameters="true" quoteParameters="false">
+      
+      		 SELECT * FROM  Document WHERE dc:title LIKE '%?%' AND ecm:mixinType != 'HiddenInNavigation'
+  			 AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted'
+  			 
+      </pattern>
+      <!-- sort column="dc:title" ascending="true" / sort by fulltext relevance -->
+      <pageSize>5</pageSize>
+    </coreQueryPageProvider>
+   </extension>	
+</component>

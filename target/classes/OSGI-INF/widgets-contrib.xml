@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="org.athento.relations-search-configuration.widgets "> 
+<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="widgettypes">
+<widgetType name="lightDocumentSuggestion">
+      <configuration>
+        <title>Single document suggestion</title>
+        <sinceVersion>5.5</sinceVersion>
+        <supportedModes>
+          <mode>view</mode>
+          <mode>edit</mode>
+        </supportedModes>
+        <fields>
+          <list>false</list>
+          <complex>false</complex>
+          <supportedTypes>
+            <type>string</type>
+          </supportedTypes>
+        </fields>
+        <categories>
+          <category>document</category>
+        </categories>
+        <properties>
+          <defaultValues mode="edit">
+            <property name="pageProviderName">light_document_suggestion</property>
+            <property name="documentSchemas">dublincore,common</property>
+            <property name="minChars">3</property>
+            <property name="width">100%</property>
+            <property name="restoreSeamCtx">true</property>
+          </defaultValues>
+          <layouts mode="view">
+            <layout name="singleDocumentSuggestion_widget_type_properties_view">
+              <rows>
+                <row>
+                  <widget category="widgetTypeConf">documentSuggestion_tab</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">documentSuggestion_subTab</widget>
+                </row>
+              </rows>
+            </layout>
+          </layouts>
+          <layouts mode="edit">
+            <layout name="singleDocumentSuggestion_widget_type_properties_edit">
+              <rows>
+                <row>
+                  <widget category="widgetTypeConf">required</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">placeholder</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">suggestion_width</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">suggestion_minChars</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">documentSuggestion_query</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">documentSuggestion_queryDemoPreview</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">documentSuggestion_pageProviderName
+                  </widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">documentSuggestion_repository</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">documentSuggestion_documentSchemas
+                  </widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">ajaxReRender</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">suggestion_helpLabel</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">suggestion_hideHelpLabel</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">select2_containerCssClass</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">select2_dropdownCssClass</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">select2_inlinejs</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">select2_inlinejsDemoPreview</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">select2_selectionFormatter</widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">select2_suggestionFormatter
+                  </widget>
+                </row>
+                <row>
+                  <widget category="widgetTypeConf">select2_dropdownOnArrow</widget>
+                </row>
+              </rows>
+            </layout>
+          </layouts>
+        </properties>
+      </configuration>
+      <handler-class>
+        org.nuxeo.ecm.platform.forms.layout.facelets.plugins.TemplateWidgetTypeHandler
+      </handler-class>
+      <property name="template">
+        /widgets/single_document_suggestion_widget_template.xhtml
+      </property>
+    </widgetType>
+
+
+  </extension> 
+</component>

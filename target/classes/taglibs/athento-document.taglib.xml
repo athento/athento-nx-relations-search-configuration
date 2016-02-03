@@ -1,0 +1,26 @@
+<!DOCTYPE facelet-taglib PUBLIC
+  "-//Sun Microsystems, Inc.//DTD Facelet Taglib 1.0//EN"
+  "http://java.sun.com/dtd/facelet-taglib_1_0.dtd">
+
+<facelet-taglib>
+  <namespace>http://athento.org/nxweb/document</namespace>
+  <function>
+    <function-name>getDocumentById</function-name>
+    <function-class>
+      AthentoFunctions
+    </function-class>
+    <function-signature>
+      org.nuxeo.ecm.core.api.DocumentModel getDocumentById(java.lang.String)
+    </function-signature>
+  </function>
+  <function>
+    <function-name>getDocProperty</function-name>
+    <function-class>
+      AthentoFunctions
+    </function-class>
+    <function-signature>
+      java.lang.Boolean getDocProperty(org.nuxeo.ecm.core.api.DocumentModel)
+    </function-signature>
+  </function>
+</facelet-taglib>
+

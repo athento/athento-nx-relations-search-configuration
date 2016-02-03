@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Require-Bundle: org.nuxeo.runtime
+Bundle-Vendor: Athento
+Bundle-Version: 1.0.0
+Bundle-Name: Athento NX Relations Search Configuration
+Nuxeo-Component: OSGI-INF/Automation/User-actions/actions-contrib.xml,
+ OSGI-INF/Content-model/Documents/doctype-contrib.xml,
+ OSGI-INF/Content-model/Schemas/schemas-contrib.xml, 
+ OSGI-INF/Listing-Views/Content-views/contentview-cv-contrib.xml,
+ OSGI-INF/Listing-Views/Form-layouts/formlayout-contrib.xml,
+ OSGI-INF/providers-contrib.xml,
+ OSGI-INF/widgets-contrib.xml
+ 
+ 
+Bundle-ManifestVersion: 2
+Created-By: Athento
+Bundle-SymbolicName: athento-nx-relations-search-configuration
+

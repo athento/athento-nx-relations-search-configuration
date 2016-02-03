@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.nuxeo.relations-search-configuration.contentview" version="1.0.0">
+	<require>org.nuxeo.runtime.started</require>	
+
+<extension  target="org.nuxeo.ecm.platform.ui.web.ContentViewService" point="contentViews">
+<contentView name="admin_athento_setup">
+      <title>label.admin.workflow.models</title>
+      <translateTitle>true</translateTitle>
+      <showTitle>false</showTitle>
+      <coreQueryPageProvider>
+        <property name="coreSession">#{documentManager}</property>
+        <pattern>SELECT * FROM Document WHERE ecm:path STARTSWITH
+          '/default-domain/athentoSetupConfig'
+        </pattern>
+        <sort ascending="true" column="dc:title"/>
+        <pageSize>20</pageSize>
+      </coreQueryPageProvider>
+      <cacheKey>#{org.jboss.seam.core.manager.currentConversationId}
+      </cacheKey>
+      <cacheSize>10</cacheSize>
+      <refresh>
+        <event>documentChildrenChanged</event>
+      </refresh>
+      <resultLayouts>
+        <layout iconPath="/icons/document_listing_icon.png" name="document_route_models_listing_ajax" showCSVExport="true" showPDFExport="true" showSyndicationLinks="true" title="document_listing" translateTitle="true"/>
+      </resultLayouts>
+      <selectionList>CURRENT_SELECTION</selectionList>
+      <actions category="CURRENT_SELECTION_LIST"/>
+    </contentView>		
+  </extension>	
+</component>
